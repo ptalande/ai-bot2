@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Club - Welcome</title>
+
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #FFFBF5; /* A warm, off-white background */
+        }
+
+        /* Custom focus style for better accessibility */
+        .card-focus:focus-visible {
+            outline: 3px solid #FB923C; /* A warm orange outline */
+            outline-offset: 4px;
+        }
+
+        /* --- HeyGen Avatar Styles (unmodified) --- */
+        #heygen-streaming-embed {
+            z-index: 9999;
+            position: fixed;
+            left: 40px;
+            bottom: 40px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid #7C2D12; /* A friendly brown border */
+            box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);
+            transition: all linear 0.1s;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+        }
+        #heygen-streaming-embed.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        #heygen-streaming-embed.expand {
+            height: 366px;
+            width: calc(366px * 16 / 9);
+            border: 0;
+            border-radius: 12px;
+        }
+        @media (max-width: 540px) {
+            #heygen-streaming-embed {
+                /* On mobile, shrink the avatar slightly and move it */
+                width: 120px;
+                height: 120px;
+                left: 20px;
+                bottom: 20px;
+            }
+            #heygen-streaming-embed.expand {
+                height: 266px;
+                width: 96%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 12px;
+            }
+        }
+        #heygen-streaming-container {
+            width: 100%;
+            height: 100%;
+        }
+        #heygen-streaming-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-10 border-b border-amber-200">
+        <div class="w-full max-w-6xl mx-auto p-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                 <!-- Logo SVG -->
+                <svg class="w-8 h-8 text-amber-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.55 2.78 9.42 6.2a1 1 0 0 0 .21 1.55l3.53 2.1a1 1 0 0 1 .21 1.55l-3.53 2.1a1 1 0 0 0-.21 1.55l3.13 3.42a1 1 0 0 0 1.55-.21l2.1-3.53a1 1 0 0 1 1.55-.21l2.1 3.53a1 1 0 0 0 1.55-.21l3.13-3.42a1 1 0 0 0-.21-1.55l-3.53-2.1a1 1 0 0 1-.21-1.55l3.53-2.1a1 1 0 0 0 .21-1.55l-3.13-3.42a1 1 0 0 0-1.55.21l-2.1 3.53a1 1 0 0 1-1.55.21Z"/><path d="M2.34 16.82a1 1 0 0 0 .21 1.55l3.53 2.1a1 1 0 0 1 .21 1.55l-3.53 2.1a1 1 0 0 0-.21 1.55L6 29.1a1 1 0 0 0 1.55-.21l2.1-3.53a1 1 0 0 1 1.55-.21l2.1 3.53a1 1 0 0 0 1.55-.21l3.13-3.42a1 1 0 0 0-.21-1.55l-3.53-2.1a1 1 0 0 1-.21-1.55l3.53-2.1a1 1 0 0 0 .21-1.55l-3.13-3.42a1 1 0 0 0-1.55.21l-2.1 3.53a1 1 0 0 1-1.55.21l-2.1-3.53a1 1 0 0 0-1.55.21Z"/></svg>
+                <h1 class="text-2xl font-bold text-amber-800">The Golden Club</h1>
+            </div>
+            <img src="https://placehold.co/40x40/FBBF24/7C2D12?text=P" alt="Profile" class="w-10 h-10 rounded-full border-2 border-amber-300">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-6xl mx-auto p-4 md:p-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-3">Welcome Back!</h2>
+            <p class="text-lg text-gray-600">What would you like to do today?</p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            
+            <!-- Card 1: Find Friends -->
+            <a href="#" class="card-focus group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                <div class="bg-orange-100 p-4 rounded-full mb-4">
+                    <svg class="w-8 h-8 text-orange-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Find Friends</h3>
+                <p class="text-gray-500 text-sm">Connect with new people in your area.</p>
+            </a>
+
+            <!-- Card 2: Easy Video Calls -->
+            <a href="#" class="card-focus group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                <div class="bg-sky-100 p-4 rounded-full mb-4">
+                     <svg class="w-8 h-8 text-sky-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 1 0 .836L16 20.818V13Z"/><rect x="2" y="7" width="14" height="12" rx="2"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Easy Video Calls</h3>
+                <p class="text-gray-500 text-sm">Chat face-to-face with family and friends.</p>
+            </a>
+
+            <!-- Card 3: Your Community -->
+            <a href="#" class="card-focus group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                <div class="bg-teal-100 p-4 rounded-full mb-4">
+                    <svg class="w-8 h-8 text-teal-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Your Community</h3>
+                <p class="text-gray-500 text-sm">Find events and groups with shared interests.</p>
+            </a>
+
+            <!-- Card 4: Accessibility -->
+            <a href="#" class="card-focus group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                <div class="bg-indigo-100 p-4 rounded-full mb-4">
+                    <svg class="w-8 h-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Accessibility</h3>
+                <p class="text-gray-500 text-sm">Adjust text size, contrast, and more.</p>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- HeyGen Avatar Embed Script -->
+    <script>
+        (function() {
+            const host = "https://labs.heygen.com";
+            const shareToken = "eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJBbm5fVGhlcmFwaXN0X3B1YmxpYyIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzLzc1ZTBhODdiN2ZkOTRmMDk4MWZmMzk4YjU5M2RkNDdmXzQ1NTcwL3ByZXZpZXdfdGFsa180LndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6Ijc4NWNlNmVjZWJkMDQ0NDQ5YzkzYTIwZTFkZTc4YTY1IiwidXNlcm5hbWUiOiI5NTgzMjdhZTVhNTk0N2FiYWExYWQwZTk2OWM5ZTk2NCJ9";
+            const avatarUrl = `${host}/guest/streaming-embed?share=${shareToken}&inIFrame=1`;
+            const wrapperDiv = document.createElement("div");
+            wrapperDiv.id = "heygen-streaming-embed";
+            const iframeContainer = document.createElement("div");
+            iframeContainer.id = "heygen-streaming-container";
+            const iframe = document.createElement("iframe");
+            iframe.allowFullscreen = false;
+            iframe.title = "Streaming Embed";
+            iframe.role = "dialog";
+            iframe.allow = "microphone";
+            iframe.src = avatarUrl;
+            window.addEventListener("message", (event) => {
+                if (event.origin !== host) return;
+                const eventData = event.data;
+                if (eventData && eventData.type === "streaming-embed") {
+                    switch (eventData.action) {
+                        case "init": wrapperDiv.classList.add("show"); break;
+                        case "show": wrapperDiv.classList.add("expand"); break;
+                        case "hide": wrapperDiv.classList.remove("expand"); break;
+                    }
+                }
+            });
+            iframeContainer.appendChild(iframe);
+            wrapperDiv.appendChild(iframeContainer);
+            document.body.appendChild(wrapperDiv);
+        })();
+    </script>
+
+</body>
+</html>
